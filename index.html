@@ -28,6 +28,37 @@
     aside{
         flex: 1;
     }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a98274;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 
 <body>
@@ -39,11 +70,34 @@
    <nav>
     <ul>
         <li><a href="./index.html">BEST</a></li>
+        <div class="dropdown">
         <li><a href="./women.html">WOMEN</a></li>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="./women.html">WOMEN1</a></li>
+                    <li><a href="./women.html">WOMEN2</a></li>
+                    <li><a href="./women.html">WOMEN3</a></li>
+                </ul>
+            </div>
+        </div>
         <li><a href="./community.html">COMMUNITY</a></li>
         <li><a href="./event/event.html">EVENT</a></li>
     </ul>
+    </div>
   </nav>
+
+ <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script>
+      $('nav li').hover(
+          function() {
+              $('ul', this).stop().slideDown(200);
+          },
+          function() {
+              $('ul', this).stop().slideUp(200);
+          }
+      );
+</script>
+
 
    <section>
     <div class="content">
