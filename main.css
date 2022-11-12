@@ -20,6 +20,7 @@ header h1{
 }
 footer{
     background-color: #a98274;
+    color: white;
 }
 nav{
     height: 40px;
@@ -55,6 +56,15 @@ nav ul {
 
 .header{
     padding-top: 100px;
+}
+
+.login{
+    position: fixed;
+    color: #a98274;
+}
+.updown{
+    position: fixed;
+    color: #a98274;
 }
 
 </style>

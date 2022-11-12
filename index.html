@@ -59,6 +59,17 @@
   display: block;
 }
 
+.updown{
+    position: fixed;
+    color: #a98274;
+}
+
+.best1, .best2, .best3{
+    display: inline-block;
+    width: 245px;
+    height: 400px;
+    border: 1px dotted brown;
+}
 </style>
 
 <body>
@@ -103,17 +114,29 @@
    <section>
     <div class="content">
     <article>
-        <div>
+        <div class="best">
             <h2>BEST</h2>
-            <img src="./shoes photo/aut2.jpg" width="40%" height="40%" alt="aut2">
-            <img src="./shoes photo/winter1.jpg" width="40%" height="40%" alt="win1">
-            <img src="./shoes photo/winter2.jpg" width="40%" height="40%" alt="win2">
+                <div class="best1">
+                    <img src="./shoes photo/aut1.jpg" width="100%" height="70%" alt="aut1">
+                    <P>RNEN 스웨이드 슈즈(3cm) <br> 가격:32,000</P>
+                    <input type="button" value="구매하기" id="aut_pro1"/>
+                </div>
+                <div class="best2">
+                    <img src="./shoes photo/winter3.jpg" width="100%" height="70%" alt="win3">
+                    <P>RNEN 펌프스 슈즈(5cm)<br> 가격:24,000</P>
+                    <input type="button" value="구매하기" id="win_pro3"/>
+                </div>
+                <div class="best3">
+                    <img src="./shoes photo/aut2.jpg" width="100%" height="70%" alt="aut2">
+                    <P>RNEN WARM 블로퍼 슈즈(5cm) <br> 가격:42,000</P>
+                    <input type="button" value="구매하기" id="aut_pro2"/>
+                </div>
 
+
+            
         </div>
-
     </article>
     </div>
-    
     
 
     <aside>
@@ -125,12 +148,20 @@
                 <input type="submit" class="w3-button w3-black" value="로그인">
                 <input type="submit" class="w3-button w3-black" value="회원가입"> <br>
             </form>
+            <div class="updown">
+                <a href=#home>
+                    <i class="fa-solid fa-caret-up">UP</i></a>
+                    <br>
+                <a href=#copy>
+                    <i class="fa-solid fa-caret-down">DOWN</i></a>
+            </div>
         </div>
+        
     </aside>
  </section>
 
  <footer>
-    <div class="copy">
+    <div class id="copy">
         <h6>
             |  SHOP NAMES : GUDU  <br>
             |  ADDRESS : (47340)176, Eomgwang-ro, Busanjin-gu, Busan, Republic of Korea <br>
@@ -140,7 +171,6 @@
         </h6>
         <h6>Copyright 2022. LinYoung All rights reserved<br>
     </div>
-    
  </footer>
 </body>
 </html>
