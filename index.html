@@ -15,23 +15,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="keywords" content="GA, GUDU, SITE, CUDUSITE">
     <meta name="author" content="Kim LInYoung">
     <title>Welcome to GUDU's Site</title>
-     <script>
-            function validateform(){
-                let x = document.forms["userForm"]["id"].value;
-                let y = document.forms["userForm"]["pw"].value;
-            if (x == "") {
-                alert("회원id를 입력");
-                userForm.id.focus();
-                return false;
-            }  
-            else if(y==""){
-                alert("비밀번호 입력");
-                userForm.pw.focus();
-                return false;
-            } else {
-                alert("회원가입이 완료되었습니다.")
-            }}
-        </script>
 
     <script src="https://kit.fontawesome.com/bd0accc7ba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.css">
@@ -91,6 +74,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: 1px dotted brown;
 }
 </style>
+
+<script>
+    function validataForm(){
+        let x = document.forms["userForm"]["id"].value;
+        let y = document.forms["userForm"]["pw"].value;
+        if (x == "") {
+            alert("ID를 입력");
+            userForm.id.focus();
+            return false;
+        }  
+        else if(y==""){
+            alert("비밀번호 입력");
+            userForm.pw.focus();
+            return false;
+        } else {
+            dataLayer.push({
+                'event' : 'userForm',
+                'formName' : '로그인'
+            })
+          alert("로그인이 완료되었습니다.")
+        } 
+    }
+</script>
+
+
 
 <body>
     <header id="home">
@@ -164,11 +172,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </article>
     </div>
     
-
     <aside>
         <div class="login">
             <h2>LOGIN</h2>
-            <form action="#" method="get" name="userForm" onsubmit="validateform();">
+            <form action="#" method="get" name="userForm" onsubmit="validataForm();">
                 ID <input type="text" class="w3-input" name="id" id=""> <br>
                 PASSWORD <input type="password" class="w3-input" name="pw" id=""> <br>
                 <input type="submit" class="w3-button w3-black" value="로그인">
