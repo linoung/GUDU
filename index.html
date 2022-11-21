@@ -98,6 +98,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 </script>
 
+<script>
+    function cartAdd7(){
+      dataLayer.push({
+        'event' : 'cartAdd7',
+        'varcart' : 'aut1'
+      })
+     alert("상품이 장바구니에 추가되었습니다.")
+    }
+</script>
+<script>
+    function cartAdd8(){
+      dataLayer.push({
+        'event' : 'cartAdd8',
+        'varcart' : 'aut2'
+      })
+     alert("상품이 장바구니에 추가되었습니다.")
+    }
+</script>
+<script>
+    function cartAdd12(){
+      dataLayer.push({
+        'event' : 'cartAdd12',
+        'varcart' : 'win3'
+      })
+     alert("상품이 장바구니에 추가되었습니다.")
+    }
+</script>
 
 
 <body>
@@ -153,17 +180,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="best1">
                     <img src="./shoes photo/aut1.jpg" width="100%" height="70%" alt="aut1">
                     <P>RNEN 스웨이드 슈즈(3cm) <br> 가격:32,000</P>
-                    <input type="button" value="구매하기" id="aut_pro1"/>
+                    <input type="button" value="구매하기" id="aut_pro1" onclick="cartAdd7();"/>
                 </div>
                 <div class="best2">
                     <img src="./shoes photo/winter3.jpg" width="100%" height="70%" alt="win3">
                     <P>RNEN 펌프스 슈즈(5cm)<br> 가격:24,000</P>
-                    <input type="button" value="구매하기" id="win_pro3"/>
+                    <input type="button" value="구매하기" id="win_pro3" onclick="cartAdd12();"/>
                 </div>
                 <div class="best3">
                     <img src="./shoes photo/aut2.jpg" width="100%" height="70%" alt="aut2">
                     <P>RNEN WARM 블로퍼 슈즈(5cm) <br> 가격:42,000</P>
-                    <input type="button" value="구매하기" id="aut_pro2"/>
+                    <input type="button" value="구매하기" id="aut_pro2" onclick="cartAdd8();"/>
                 </div>
 
 
