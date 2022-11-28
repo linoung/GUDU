@@ -73,6 +73,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height: 400px;
     border: 1px dotted brown;
 }
+
+.event_pho1, .event_pho2{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+
 </style>
 
 <script>
@@ -93,7 +139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'event' : 'userForm',
                 'formName' : '회원가입'
             })
-          alert("회원가입이 완료되었습니다.")
+          alert("회원가입 완료되었습니다.")
         } 
     }
 </script>
@@ -175,6 +221,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <section>
     <div class="content">
     <article>
+      <div class="event_pho1">
+            <h2>EVENT</h2>
+            <img src="./index_image/review_event1.png" width="750" alt="event_pho1">
+        </div>
+        <div class="event_pho2">
+            <img src="./index_image/review_event2.png" width="750" alt="event_pho2">
+        </div>
         <div class="best">
             <h2>BEST</h2>
                 <div class="best1">
@@ -191,11 +244,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="./shoes photo/aut2.jpg" width="100%" height="70%" alt="aut2">
                     <P>RNEN WARM 블로퍼 슈즈(5cm) <br> 가격:42,000</P>
                     <input type="button" value="구매하기" id="aut_pro2" onclick="cartAdd8();"/>
-                </div>
-
-
-            
+                </div>  
         </div>
+        
+
+        <div class="INFOR">
+            <h2>INFORMATION</h2>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./index_image/배송 관련 정보.pdf">
+                <img src="./index_image/배송정보.png" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">배송 정보</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./index_image/교환 및 환불 관련 정보.pdf">
+                <img src="./index_image/교환환불정보1.png" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">교환 및 환불 정보</div>
+            </div>
+        </div>
+        
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./index_image/개인정보 보호 정책 정보.pdf">
+                <img src="./index_image/개인정보 보호 정책정보 1.png" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">개인정보 보호 정책</div>
+            </div>
+        </div>
+       
     </article>
     </div>
     
